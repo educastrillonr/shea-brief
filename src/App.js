@@ -1,24 +1,15 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import Face from "./components/Face";
+import "./App.css";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Face leftAngle={60} rightAngle={40} />
+      <Face leftAngle={100} rightAngle={19} />
+      <Face leftAngle={40} rightAngle={89} />
+      <Face leftAngle={90} rightAngle={110} />
+      <Face leftAngle={165} rightAngle={50} />
     </div>
   );
 }
