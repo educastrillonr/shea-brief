@@ -5,7 +5,7 @@ import rightEye from "../assets/righteye.PNG";
 import "./Face.css";
 
 class Face extends Component {
-  state = { isNormal: true, left: 0, right: 0 };
+  state = { isNormal: true, left: 0, right: 0, scale: 1 };
 
   handleClick = () => {
     this.setState({
@@ -15,20 +15,26 @@ class Face extends Component {
     if (!this.state.isNormal) {
       this.setState({
         left: this.props.leftAngle,
-        right: this.props.rightAngle
+        right: this.props.rightAngle,
+        scale: this.props.scale
       });
     } else {
       this.setState({
         left: 0,
-        right: 0
+        right: 0,
+        scale: 1
       });
     }
   };
 
   render() {
-    const rotateStyleLeft = { transform: "rotate(" + this.state.left + "deg)" };
+    const rotateStyleLeft = {
+      transform:
+        "rotate(" + this.state.left + "deg) scale(" + this.state.scale + ")"
+    };
     const rotateStyleRight = {
-      transform: "rotate(" + this.state.right + "deg)"
+      transform:
+        "rotate(" + this.state.right + "deg)scale(" + this.state.scale + ")"
     };
     return (
       <section onClick={this.handleClick}>

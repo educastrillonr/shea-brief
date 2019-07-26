@@ -9,7 +9,7 @@ section {
 .face {
   position: absolute;
   width: 100%;
-  border: 8px black solid;
+  border: 8px rgb(107, 16, 16) solid;
 }
 
 .eye {

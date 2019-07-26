@@ -5,11 +5,14 @@ import "./App.css";
 function App() {
   return (
     <div className="App">
-      <Face leftAngle={60} rightAngle={40} />
-      <Face leftAngle={100} rightAngle={19} />
-      <Face leftAngle={40} rightAngle={89} />
-      <Face leftAngle={90} rightAngle={110} />
-      <Face leftAngle={165} rightAngle={50} />
+      <Face leftAngle={-20} rightAngle={25} scale={1} />
+      <Face leftAngle={30} rightAngle={-20} scale={1} />
+      <Face leftAngle={345} rightAngle={89} scale={1} />
+      <Face leftAngle={-330} rightAngle={340} scale={1.4} />
+      <Face leftAngle={165} rightAngle={50} scale={1.8} />
+      <Face leftAngle={340} rightAngle={-340} scale={0.6} />
+      <Face leftAngle={-1330} rightAngle={2340} scale={1.4} />
+      <Face leftAngle={20} rightAngle={-20} scale={0.4} />
     </div>
   );
 }

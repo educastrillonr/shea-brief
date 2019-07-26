@@ -5,4 +5,9 @@
   flex-wrap: wrap;
   justify-content: space-around;
   align-items: center;
+  background: rgb(102, 102, 102);
+  background-image: url(./assets/the-beatles-minimalism-simple-background-music-wallpaper.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: 50%;
 }
