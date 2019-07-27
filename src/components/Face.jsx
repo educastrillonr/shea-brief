@@ -12,7 +12,7 @@ class Face extends Component {
       isNormal: !this.state.isNormal
     });
 
-    if (!this.state.isNormal) {
+    if (this.state.isNormal) {
       this.setState({
         left: this.props.leftAngle,
         right: this.props.rightAngle,
@@ -37,7 +37,7 @@ class Face extends Component {
         "rotate(" + this.state.right + "deg)scale(" + this.state.scale + ")"
     };
     return (
-      <section onClick={this.handleClick}>
+      <article onClick={this.handleClick}>
         <img className="face" src={face} alt="" />
         <img
           className="eye left-eye"
@@ -51,7 +51,7 @@ class Face extends Component {
           src={rightEye}
           alt=""
         />
-      </section>
+      </article>
     );
   }
 }

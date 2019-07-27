@@ -3,16 +3,26 @@ import Face from "./components/Face";
 import "./App.css";
 
 function App() {
-  return (
+
+  let nOfSheas = 50;
+  let sheaArray = [];
+  const getRandomScale = () => {
+    return Math.random()*2;
+  }
+
+  const getRandomAngle = () => {
+    return Math.floor(Math.random()*720) - 360;
+  }
+
+  for (let index = 0; index < nOfSheas; index++) {
+    sheaArray.push({leftAngle: getRandomAngle(), rightAngle: getRandomAngle(), scale: getRandomScale()});
+  }
+  
+    return (
     <div className="App">
-      <Face leftAngle={-20} rightAngle={25} scale={1} />
-      <Face leftAngle={30} rightAngle={-20} scale={1} />
-      <Face leftAngle={345} rightAngle={89} scale={1} />
-      <Face leftAngle={-330} rightAngle={340} scale={1.4} />
-      <Face leftAngle={165} rightAngle={50} scale={1.8} />
-      <Face leftAngle={340} rightAngle={-340} scale={0.6} />
-      <Face leftAngle={-1330} rightAngle={2340} scale={1.4} />
-      <Face leftAngle={20} rightAngle={-20} scale={0.4} />
+      {sheaArray.map((face, index) => (
+        <Face leftAngle={face.leftAngle} rightAngle={face.rightAngle} scale={face.scale} key={index} />
+      ))}
     </div>
   );
 }
